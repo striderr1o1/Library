@@ -87,28 +87,8 @@ submitbutton.addEventListener("click", function(event){
     //the delete method is broke
     
 })
-if(i > 0)
-{
-    let deleteButton = document.querySelector(".deletebutton");
-    let grandparent = deleteButton.parentNode.parentNode;
-    let title = document.getElementById("#booktitle");
-    let author = document.getElementById("#authorname");
-    let pages = document.getElementById("#pagecount");
-    let read = document.getElementById("#read");
-    let buttondiv = document.getElementById("#deletebuttondiv");
-    deleteButton.addEventListener("click",function(){
-    
 
-    grandparent.removeChild(title);
-    grandparent.removeChild(author);
-    grandparent.removeChild(pages);
-    grandparent.removeChild(read);
-    grandparent.removeChild(buttondiv)
-    grandparent.firstChild.removeChild(deleteButton);
 
-    // let index = deleteButton.parentNode.parentNode.dataset.indexNumber;
-} )
-}
 //create a large function that first takes the inputs of the form, then puts them in the make book function and appends the book to array, and the function loops over array.
 
 let booksdiv = document.getElementsByClassName("book-div");
