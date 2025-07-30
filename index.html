@@ -7,6 +7,36 @@
     <title>Library</title>
 </head>
 <body>
+    <h1 class="main-heading">My Library</h1>
+    <div class="formcontainer">
+         <form action="">
+            <p><label for="bookname">Title: 
+                <input id="bookname" type="text" name="title" placeholder="The Hobbit">
+            </label></p>
+            <p><label for="authorname">Author: 
+                <input id="authorname" type="text" name="author" >
+            </label></p>
+            <p><label for="pagecount">Pages: 
+                <input type="number" name="pages" id="pagecount">
+            </label></  p>
+            <p><label for="read">Read: 
+                <input type="text" name="status" id="read">
+            </label></p>
+        </form>
+       </div>
+    <div class="book-div">
+       
+        <div class="bookcontainer">
+            <p class="bookname">Title: The Hobbit</p>
+            <p class="author">Author: J.R.R Tolkien</p>
+            <p class="pages">Pages: 295</p>
+            <p class="read-status">Read: nope</p>
+        </div>
+        
+    </div>
+    <div class="button-div">
+        <button class="addbook-button">Add book</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
