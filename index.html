@@ -10,23 +10,27 @@
     <h1 class="main-heading">My Library</h1>
     <div class="formcontainer">
          <form action="">
-            <p><label for="bookname">Title: 
-                <input id="bookname" type="text" name="title" placeholder="The Hobbit">
+            <p><label for="booktitle">Title: 
+                <input required id="booktitle" type="text" name="title" placeholder="The Hobbit">
             </label></p>
             <p><label for="authorname">Author: 
-                <input id="authorname" type="text" name="author" >
+                <input required id="authorname" type="text" name="author" >
             </label></p>
             <p><label for="pagecount">Pages: 
-                <input type="number" name="pages" id="pagecount">
-            </label></  p>
-            <p><label for="read">Read: 
-                <input type="text" name="status" id="read">
+                <input required type="number" name="pages" id="pagecount">
             </label></p>
+            <p><label for="read">Read: 
+                <input required type="text" name="status" id="read" >
+            </label></p>
+            <p><button id="submitform" type="submit">Submit</button></p>
         </form>
        </div>
     <div class="book-div">
        
-        <div class="bookcontainer">
+        <div class="bookcontainer" data-index-number="">
+            <div class="deletebuttondiv">
+                <button class="deletebutton">X</button>
+            </div>
             <p class="bookname">Title: The Hobbit</p>
             <p class="author">Author: J.R.R Tolkien</p>
             <p class="pages">Pages: 295</p>
