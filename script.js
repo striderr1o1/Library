@@ -1,3 +1,5 @@
+//book object constrcutor
+
 function Book(title, author, pages, read){
     if(!new.target){
         console.log("must use new keyword to call constructor")
@@ -7,21 +9,22 @@ function Book(title, author, pages, read){
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.info = function(){
-        return `${title} by ${author}, ${pages}, ${read} yet.`;
-    }
+    // this.info = function(){
+    //     return `${title} by ${author}, ${pages}, ${read} yet.`;
+    // }
 }
-
+//the array
 const myLibrary = []
 
+//add book to library
 function addBooktoLibrary(title, author, pages, read){
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
     console.log("pushed")
 }
-
+//the book div
 const bookdiv = document.querySelector(".book-div");
-function loop(num){
+function makeBlock(num){
     let buttondiv = document.createElement('div');
     buttondiv.className = "deletebuttondiv";
 
@@ -77,18 +80,21 @@ let read = document.querySelector("#read");
 let i = 0;
 let bookcont = document.querySelector(".bookcontainer");
 
+let title2 = document.querySelector(".bookname");
+let author2 = document.querySelector(".author");
+let pages2 = document.querySelector(".pages");
+let read2 = document.querySelector(".read-status");
+let buttondiv = document.querySelector(".deletebuttondiv");
+
 submitbutton.addEventListener("click", function(event){
     addBooktoLibrary(title.value, author.value, pages.value, read.value);
     
-    loop(i);
+    makeBlock(i);
     i++;
     popThepopUp();
     event.preventDefault()
-    //the delete method is broke
     
 })
-
-
 //create a large function that first takes the inputs of the form, then puts them in the make book function and appends the book to array, and the function loops over array.
 
 let booksdiv = document.getElementsByClassName("book-div");
