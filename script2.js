@@ -11,12 +11,14 @@ function Book(title, author, pages, read){
     
 }
 
-const myLibrary = []
+const myLibrary = [];
+let bookcount = 0;
 
 function addBooktoArray(title, author, pages, read){
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
-    console.log("pushed")
+    bookcount++;
+    
 }
 //pop up on off
 let formcont = document.querySelector(".formcontainer");
@@ -80,6 +82,7 @@ function loopOverArray(){
         delbutton.className = "deletebutton";
         delbutton.textContent = "X";
         buttondiv.appendChild(delbutton);
+        
 
         let titlechild = document.createElement('p');
         titlechild.className = "bookname";
@@ -98,7 +101,42 @@ function loopOverArray(){
 
         let readchild = document.createElement('p');
         readchild.className = "read-status";
-        readchild.textContent ="Read: "+ myLibrary[i].read;
+        readchild.textContent = myLibrary[i].read;
         parent.appendChild(readchild);
+
+        let statusbutton = document.createElement('button');
+        statusbutton.className = "status";
+        statusbutton.textContent = "Change Read status";
+        parent.appendChild(statusbutton);
+
+        statusbutton.addEventListener("click", function(){
+            
+            if(readchild.textContent === "Not read")
+            {
+                readchild.textContent = "read";
+            }
+            else{
+                readchild.textContent = "Not read";
+            }
+        })
+
+        delbutton.addEventListener("click", function(){
+            
+            myLibrary.splice(i, 1);
+            emptyBookDiv();
+            loopOverArray();
+        })
     }
 }
+
+// if(myLibrary.length > 0){
+//     console.log("greater than 0")
+//     //new to implement deletetion functionality
+    
+// }
+
+let bookdiv = document.querySelector(".book-div");
+
+
+
+
