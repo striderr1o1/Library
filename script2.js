@@ -1,4 +1,4 @@
-
+// class-v
 function Book(title, author, pages, read){
     if(!new.target){
         console.log("must use new keyword to call constructor")
