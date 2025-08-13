@@ -1,15 +1,4 @@
-// class-v
-// function Book(title, author, pages, read){
-//     if(!new.target){
-//         console.log("must use new keyword to call constructor")
-//     }
-//     this.id = crypto.randomUUID()
-//     this.title = title;
-//     this.author = author;
-//     this.pages = pages;
-//     this.read = read;
-    
-// }
+
 
 class Book{
     constructor(title, author, pages, read){
